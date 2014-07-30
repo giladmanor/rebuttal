@@ -14,7 +14,7 @@
     });
 	  
 // DM Top
-(function($) {
+$(function() {
  "use strict";
 	jQuery(window).scroll(function(){
 		if (jQuery(this).scrollTop() > 1) {

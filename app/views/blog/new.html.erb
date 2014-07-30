@@ -1,4 +1,5 @@
 <!-- STANDARD POST -->
+<%= form_tag("/save", role:"form", enctype:"multipart/form-data", class:"form-horizontal style-form") do%>
 <article class="blog-wrap text-center">
 	<div class="blog-media">
 		<div class="he-wrap tpl2">
@@ -10,21 +11,22 @@
 		<div class="author-wrap">
 			<span class="inside"> <a href="#"><img class="img-responsive" alt="" src="demos/team_03.png"></a> </span>
 		</div>
-		<h3 class="general-title">this is the title of the post</h3>
+		<h3 class="general-title"><input name="title" placeholder="Title" style="width: 100%;"/></h3>
 		<div class="post-meta">
 			<p>
-				Published at: <span class="publish-on">21/01/2014</span>
-				<span class="sep">/</span> Debate: <a href="#"> 4 Rebuttles</a>
+				Words left <span class="publish-on">140</span>
+				<span class="sep">/</span> <button type="submit"> Publish</button>
 			</p>
 		</div>
 	</header>
 
 	<div class="post-desc">
 		<p>
-			<%= "word "*140%>
+			<textarea name="body" placeholder="Text" style="width: 100%;height: 166px"></textarea>
+			
 		</p>
 		
 	</div>
 </article>
-
+<%end%>
 <hr>
