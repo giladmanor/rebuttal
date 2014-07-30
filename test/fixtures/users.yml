@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ooth_id: MyString
+  ooth_source: MyString
+  incognito: false
+  bio: MyText
+  permissions: MyString
+
+two:
+  name: MyString
+  ooth_id: MyString
+  ooth_source: MyString
+  incognito: false
+  bio: MyText
+  permissions: MyString
