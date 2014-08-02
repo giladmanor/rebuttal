@@ -13,6 +13,10 @@ class BlogController < ApplicationController
     @statement = Statement.order(rank: :asc).where(["rank < ?", params[:rank].to_i]).last
     render :index, :layout=> false
   end
+  
+  def conversation
+    @statement = Statement.find params[:id]
+  end
 
   def save
     statement = Statement.create(title:params[:title],body:params[:body],user:@user)

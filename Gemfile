@@ -37,6 +37,10 @@ gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook', '1.4.0'
 
+
+gem 'quiet_assets', :group => :development
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

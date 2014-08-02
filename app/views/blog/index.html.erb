@@ -2,7 +2,7 @@
 <article class="blog-wrap text-center">
 	<div class="blog-media">
 		<div class="he-wrap tpl2">
-			<a href="#">
+			<a href="/rebuttal/<%=@statement.id%>">
 			<div style="width: 100%;height: 100px;background-color: gray;text-align: end;color: white;">
 				<span> See Conversation <i class="fa fa-angle-right"></i></span>&nbsp;
 			</div><!-- he wrap -->
@@ -11,7 +11,7 @@
 
 		<header class="page-header blog-title">
 			<div class="author-wrap" style="">
-				<span class="inside"> <a href="#"><img class="img-responsive" alt="" src="demos/team_03.png"></a> </span>
+				<span class="inside"> <a href="#"><img class="img-responsive" alt="" src="<%= @statement.user.social_info[:profile_image_url]%>"></a> </span>
 			</div>
 			<h3 class="general-title"><%= @statement.title%></h3>
 			<div class="post-meta">

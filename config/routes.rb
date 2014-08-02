@@ -5,7 +5,8 @@ Rebuttal::Application.routes.draw do
   post "save",:controller=>:blog,:action=>:save
   post "view_next",:controller=>:blog
   post "view_prev",:controller=>:blog
-  
+  get "logout", :controller=>:auth
+  get "rebuttal", :controller=>:blog, :action=>:conversation
   
   
   # OAUTH (SOCIAL) OAUTH (SOCIAL) OAUTH (SOCIAL) OAUTH (SOCIAL) 
