@@ -2,29 +2,33 @@
 <article class="blog-wrap text-center">
 	<div class="blog-media">
 		<div class="he-wrap tpl2">
-			<div style="width: 100%;height: 100px;background-color: gray">
-		</div><!-- he wrap -->
-	</div>
-
-	<header class="page-header blog-title">
-		<div class="author-wrap">
-			<span class="inside"> <a href="#"><img class="img-responsive" alt="" src="demos/team_03.png"></a> </span>
+			<a href="#">
+			<div style="width: 100%;height: 100px;background-color: gray;text-align: end;color: white;">
+				<span> See Conversation <i class="fa fa-angle-right"></i></span>&nbsp;
+			</div><!-- he wrap -->
+			</a>
 		</div>
-		<h3 class="general-title">this is the title of the post</h3>
-		<div class="post-meta">
+
+		<header class="page-header blog-title">
+			<div class="author-wrap" style="">
+				<span class="inside"> <a href="#"><img class="img-responsive" alt="" src="demos/team_03.png"></a> </span>
+			</div>
+			<h3 class="general-title"><%= @statement.title%></h3>
+			<div class="post-meta">
+				<p>
+					Published <span class="publish-on"><%= time_ago_in_words(@statement.created_at)%> ago</span>
+					<span class="sep">/</span> Debate: <a href="#"> 4 Rebuttles</a>
+				</p>
+			</div>
+		</header>
+
+		<div class="post-desc">
 			<p>
-				Published at: <span class="publish-on">21/01/2014</span>
-				<span class="sep">/</span> Debate: <a href="#"> 4 Rebuttles</a>
+				<%= @statement.body%>
 			</p>
+
 		</div>
-	</header>
-
-	<div class="post-desc">
-		<p>
-			<%= "word "*140%>
-		</p>
-		
-	</div>
 </article>
+<script>
+		window.currentlyViewed = <%= @statement.rank%></script>
 
-<hr>
