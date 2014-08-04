@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140802162441) do
+ActiveRecord::Schema.define(version: 20140804110843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140802162441) do
     t.integer  "upvotes"
     t.integer  "downvotes"
     t.integer  "rank"
-    t.integer  "parent"
+    t.integer  "parent_id"
     t.boolean  "draft"
     t.datetime "created_at"
     t.datetime "updated_at"

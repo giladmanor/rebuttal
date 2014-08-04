@@ -3,30 +3,49 @@
 <article class="blog-wrap text-center">
 	<div class="blog-media">
 		<div class="he-wrap tpl2">
-			<div style="width: 100%;height: 100px;background-color: gray">
-		</div><!-- he wrap -->
-	</div>
-
-	<header class="page-header blog-title">
-		<div class="author-wrap">
-			<span class="inside"> <a href="#"><img class="img-responsive" alt="" src="demos/team_03.png"></a> </span>
+			<div style="width: 100%;height: 100px;background-color: gray"></div><!-- he wrap -->
 		</div>
-		<h3 class="general-title"><input name="title" placeholder="Title" style="width: 100%;"/></h3>
-		<div class="post-meta">
+
+		<header class="page-header blog-title">
+			<div class="author-wrap">
+				<span class="inside"> <a href="#"><img class="img-responsive" alt="" src="<%= @user.social_info[:profile_image_url] unless @user.nil?%>"></a> </span>
+			</div>
+			<h3 class="general-title">
+			<input name="title" placeholder="Title" style="width: 100%;"/>
+			</h3>
+			<div class="post-meta">
+				<p>
+					Words left <span class="publish-on" id="wordCounter">140</span>
+					<span class="sep">/</span>
+					<button type="submit">
+						Publish
+					</button>
+				</p>
+			</div>
+		</header>
+
+		<div class="post-desc">
 			<p>
-				Words left <span class="publish-on">140</span>
-				<span class="sep">/</span> <button type="submit"> Publish</button>
-			</p>
-		</div>
-	</header>
-
-	<div class="post-desc">
-		<p>
-			<textarea name="body" placeholder="Text" style="width: 100%;height: 166px"></textarea>
+				<textarea id="body" name="body" placeholder="Text limited to 140 words" style="width: 100%;height: 166px" onkeyup="wordCount(this)"></textarea>												
 			
-		</p>
-		
-	</div>
+
+
+
+			</p>
+
+		</div>
 </article>
 <%end%>
 <hr>
+<script>
+	var wordCount = function(that) {
+		var words = $(that).val().split(/\b[\s,\.-:;]*/);
+		console.log(words)
+		$("#wordCounter").text(140-words.length);
+		
+	};
+
+	$(function() {
+
+	}); 
+</script>

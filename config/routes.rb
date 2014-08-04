@@ -5,6 +5,7 @@ Rebuttal::Application.routes.draw do
   post "save",:controller=>:blog,:action=>:save
   post "view_next",:controller=>:blog
   post "view_prev",:controller=>:blog
+  post "starter",:controller=>:blog
   get "logout", :controller=>:auth
   get "rebuttal(/:id)", :controller=>:blog, :action=>:conversation
   

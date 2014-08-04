@@ -15,22 +15,11 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
-	$(".statements").on('mousewheel', function(event) {
-		console.log(event.deltaX, event.deltaY, event.deltaFactor);
-		if (event.deltaY < 0) {
-			goPrev();
-		}
-		if (event.deltaY > 0) {
-			goNext();
-		}
 
-	});
-});
 
 var goPrev = function() {//back in rank
 	send("view_prev",{rank:window.currentlyViewed},function(res){
-		console.log(res);
+		//console.log(res);
 		$("#statementContainer").animate({
 			top:"-1000px"
 		},500,function(){
@@ -50,7 +39,7 @@ var goPrev = function() {//back in rank
 
 var goNext = function() {//Forward in rank
 	send("view_next",{rank:window.currentlyViewed},function(res){
-		console.log(res);
+		//console.log(res);
 		$("#statementContainer").animate({
 			top:"1000px"
 		},500,function(){

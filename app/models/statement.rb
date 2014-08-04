@@ -1,10 +1,14 @@
 class Statement < ActiveRecord::Base
+  acts_as_tree
   belongs_to :user
   before_save :calculate_rank
   
   
   
-  
+  def conversation_size
+    return self.children.size if parent.nil?
+    parent.children.size
+  end
   
   private
   

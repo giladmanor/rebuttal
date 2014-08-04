@@ -37,7 +37,7 @@ gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook', '1.4.0'
 
-
+gem 'acts_as_tree'
 gem 'quiet_assets', :group => :development
 
 
