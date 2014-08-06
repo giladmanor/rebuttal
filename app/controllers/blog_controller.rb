@@ -21,6 +21,14 @@ class BlogController < ApplicationController
       @statement = @statement.parent
     end
   end
+  
+  def delete
+    if params[:k]=="delete"
+      @statement = Statement.find params[:id]
+      @statement.destroy
+    end
+    render :json => {:ok=>1}
+  end
 
   def save
     statement = Statement.create(title:params[:title],body:params[:body],user:@user, parent_id:params[:parent_id])

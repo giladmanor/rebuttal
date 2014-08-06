@@ -3,6 +3,7 @@ Rebuttal::Application.routes.draw do
   root :to => 'blog#index'
   get 'new(/:id)', :controller=>:blog, :action=>:new
   post "save",:controller=>:blog,:action=>:save
+  get "delete(/:id)",:controller=>:blog,:action=>:delete
   post "view_next",:controller=>:blog
   post "view_prev",:controller=>:blog
   post "starter",:controller=>:blog
