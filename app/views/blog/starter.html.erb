@@ -3,7 +3,7 @@
 	<div class="blog-media">
 		<div class="he-wrap tpl2">
 			<a href="/rebuttal/<%=@statement.id%>">
-			<div style="width: 100%;height: 100px;background-color: gray;text-align: end;color: white;">
+			<div style="width: 100%;height: 100px;background-color: gray;text-align: end;color: white;background-image: url(<%= @statement.user.social_info[:profile_background_image_url]%>)">
 				<span> See Conversation <i class="fa fa-angle-right"></i></span>&nbsp;
 			</div><!-- he wrap -->
 			</a>
@@ -17,7 +17,7 @@
 			<div class="post-meta">
 				<p>
 					Published <span class="publish-on"><%= time_ago_in_words(@statement.created_at)%> ago</span>
-					<span class="sep">/</span> Debate: <a href="#"> <%=@statement.conversation_size%> Rebuttles</a>
+					<span class="sep">/</span> Debate: <a href="/rebuttal/<%=@statement.id%>"> <%=@statement.conversation_size%> Rebuttles</a>
 				</p>
 			</div>
 		</header>
